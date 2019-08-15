@@ -31,11 +31,13 @@
             @if(count($users) > 0)
             <table class="table table-bordered table-striped text-uppercase">
                 <tr class="row">
-                        @foreach ($users as $user)
+                        @foreach ($users as $index => $user)
                             <td class="col">
                                 <div class="card text-center p-0">
                                     <div class="card-header">
-                                        <h6>{{$user->name}}</h6></div>
+                                        <h6>Administrator: No{{$index + 1}}</h6>
+                                        <h6>name: {{$user->name}}</h6>
+                                    </div>
                                     <div class="card-body">
                                         <img style="height:190px;width:190px" src="/storage/cover_image/{{$user->cover_image}}" alt="No image" class="img-fluid">
                                     </div>

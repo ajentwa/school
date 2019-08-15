@@ -32,7 +32,8 @@ class StudentController extends Controller
         $stdseven = count($stdseven);
         $students_nursery = $babyclass + $kinderone + $kindertwo;
         $students_primary = $stdone + $stdtwo + $stdthree + $stdfour + $stdfive + $stdsix + $stdseven;
-        return view('Backend/UserManagement/Students/index', compact('students_nursery','students_primary'));
+        $total = $students_nursery + $students_primary;
+        return view('Backend/UserManagement/Students/index', compact('students_nursery','students_primary','total'));
     }
 
     public function nursery()

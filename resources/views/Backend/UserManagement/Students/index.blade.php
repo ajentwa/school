@@ -22,13 +22,17 @@
             <div class="card-body">
                 <ul class="list-group mb-5">
                     <a class="h4 list-group-item list-group-item-action text-success font-italic d-flex justify-content-between align-items-center" href="{{\Illuminate\Support\Facades\URL::to('/student/nursery')}}">
-                        Nursery classes
-                    <span class="badge badge-success badge-pill">{{$students_nursery}}</span>
+                        Nursery Students
+                    <span class="badge badge-success badge-pill">{{$students_nursery}}&nbsp; Students</span>
                     </a>
-                    <a class="h4 list-group-item list-group-item-action text-success font-italic d-flex justify-content-between align-items-center" href="{{\Illuminate\Support\Facades\URL::to('/student/primary')}}">
-                        Primary classes
-                    <span class="badge badge-success badge-pill">{{$students_primary}}</span>
+                    <a class="h4 list-group-item list-group-item-action text-success font-italic d-flex justify-content-between align-items-center mb-3" href="{{\Illuminate\Support\Facades\URL::to('/student/primary')}}">
+                        Primary Students
+                    <span class="badge badge-success badge-pill">{{$students_primary}}&nbsp; Students</span>
                     </a>
+                    <li class="h4 list-group-item list-group-item-action text-dark d-flex justify-content-between align-items-center">
+                        Totol number of Students:
+                    <span class="badge badge-dark badge-pill">{{$total}}&nbsp; Students</span>
+                    </li>
                 </ul>
             </div>
         </div>

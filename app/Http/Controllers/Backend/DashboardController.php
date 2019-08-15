@@ -38,9 +38,10 @@ class DashboardController extends Controller
         $stdseven = count($stdseven);
         $students_nursery = $babyclass + $kinderone + $kindertwo;
         $students_primary = $stdone + $stdtwo + $stdthree + $stdfour + $stdfive + $stdsix + $stdseven;
+        $school_students = $students_nursery + $students_primary;
         $teaandlunchfee = Fee::where('feetype_id','3')->get();
         $malambafee = Fee::where('feetype_id','5')->get();
-        return view('Backend.dashboard', compact('students_nursery','students_primary','teaandlunchfee','malambafee'));
+        return view('Backend.dashboard', compact('students_nursery','students_primary','teaandlunchfee','malambafee','school_students'));
     }
   
     /**

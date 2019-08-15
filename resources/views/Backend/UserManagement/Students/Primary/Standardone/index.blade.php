@@ -29,14 +29,16 @@
                     <div class="table-responsive">
                     <table class="table table-lg table-bordered table-striped text-uppercase">
                         <tr>
+                            <th>#</th>
                             <th>Full Name</th>
                             <th>Reg Number</th>
                             <th>Orphan</th>
                             <th>Parent Name</th>
                             <th class="text-center">Operation</th>
                         </tr>
-                        @foreach ($users as $user)
+                        @foreach ($users as $index => $user)
                             <tr>
+                                <td>{{$index + 1}}</td>
                                 <td>{{$user->name}}</td>
                                 <td>{{$user->reg_number}}</td>
                                 <td>{{$user->orphan}}</td>

@@ -27,14 +27,16 @@
                     @if(count($subjects) > 0)
                     <table class="table table-lg table-bordered table-striped text-uppercase">
                         <tr>
+                            <th>#</th>
                             <th>Subject Code</th>
                             <th>Subject name</th>
                             <th>Subject Teacher</th>
                             <th>Book Name</th>
                             <th>Operation</th>
                         </tr>
-                        @foreach ($subjects as $subject)
+                        @foreach ($subjects as $index => $subject)
                             <tr>
+                                <td>{{$index + 1}}</td>
                                 <td>{{$subject->subject_code}}</td>
                                 <td>{{$subject->subject_name}}</td>
                                 <td>{{$subject->subject_teacher}}</td>

@@ -27,14 +27,16 @@
                     @if(count($users) > 0)
                     <table class="table table-lg table-bordered table-striped text-uppercase">
                         <tr>
+                            <th>#</th>
                             <th>Full name</th>
                             <th>Employee Code</th>
                             <th>Occupation</th>
                             <th>Education level</th>
                             <th>Operation</th>
                         </tr>
-                        @foreach ($users as $user)
+                        @foreach ($users as $index => $user)
                             <tr>
+                                <td>{{$index + 1}}</td>
                                 <td>{{$user->name}}</td>
                                 <td>{{$user->reg_number}}</td>
                                 <td>{{$user->occupation}}</td>

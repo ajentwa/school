@@ -27,13 +27,15 @@
                     @if(count($classes) > 0)
                     <table class="table table-lg table-bordered table-striped text-uppercase">
                         <tr>
+                            <th>#</th>
                             <th>Class name</th>
                             <th>Class teacher</th>
                             <th>No Of Class Students</th>
                             <th>Operation</th>
                         </tr>
-                        @foreach ($classes as $class)
+                        @foreach ($classes as $index => $class)
                             <tr>
+                                <td>{{$index + 1}}</td>
                                 <td>{{$class->class_name}}</td>
                                 <td>{{$class->class_teacher}}</td>
                                 <td>{{$class->class_students}}</td>

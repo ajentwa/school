@@ -28,14 +28,16 @@
                     @if(count($users) > 0)
                     <table class="table table-lg table-bordered table-striped text-uppercase">
                         <tr>
+                            <th>#</th>
                             <th>Student Name</th>
                             <th>Parent Name</th>
                             <th>Parent Occupation</th>
                             <th>Parent Phone No1</th>
                             <th>Parent Phone No2</th>
                         </tr>
-                        @foreach ($users as $user)
+                        @foreach ($users as $index => $user)
                             <tr>
+                                <td>{{$index + 1}}</td>
                                 <td>{{$user->name}}</td>
                                 <td>{{$user->relative_name}}</td>
                                 <td>{{$user->relative_occupation}}</td>

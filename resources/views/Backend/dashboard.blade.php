@@ -40,21 +40,25 @@
               <div class="col-md-12">
                 <div class="card text-uppercase font-weight-bold mb-3">
                   <div class="list-group">
+                    <a href="{{\Illuminate\Support\Facades\URL::to('/student')}}" class="text-success list-group-item list-group-item-action d-flex justify-content-between align-items-center h4">
+                      school students
+                      <span class="badge badge-success badge-pill">{{ $school_students }}&nbsp; Students</span>
+                    </a>
                     <a href="{{\Illuminate\Support\Facades\URL::to('/student/nursery')}}" class="text-success list-group-item list-group-item-action d-flex justify-content-between align-items-center h4">
                       nursery students
-                      <span class="badge badge-success badge-pill">{{ $students_nursery }}</span>
+                      <span class="badge badge-success badge-pill">{{ $students_nursery }}&nbsp; Students</span>
                     </a>
                     <a href="{{\Illuminate\Support\Facades\URL::to('/student/primary')}}" class="text-success list-group-item list-group-item-action d-flex justify-content-between align-items-center h4">
                       primary students
-                      <span class="badge badge-success badge-pill">{{ $students_primary }}</span>
+                      <span class="badge badge-success badge-pill">{{ $students_primary }}&nbsp; Students</span>
                     </a>
                     <a href="{{\Illuminate\Support\Facades\URL::to('/makemalambapayment')}}" class="text-success list-group-item list-group-item-action d-flex justify-content-between align-items-center h4">
                       transport  fee payment
-                      <span class="badge badge-success badge-pill">{{ count($malambafee) }}</span>
+                      <span class="badge badge-success badge-pill">{{ count($malambafee) }}&nbsp; paid Students</span>
                     </a>
                     <a href="{{\Illuminate\Support\Facades\URL::to('/maketeaandlunchpayment')}}" class="text-success list-group-item list-group-item-action d-flex justify-content-between align-items-center h4">
                       food  fee payment
-                      <span class="badge badge-success badge-pill">{{ count($teaandlunchfee) }}</span>
+                      <span class="badge badge-success badge-pill">{{ count($teaandlunchfee) }}&nbsp; paid Students</span>
                     </a>
                   </div>
                 </div>
